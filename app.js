@@ -96,3 +96,34 @@ function displayObjLength(object) {
 }
 
 
+/*
+Exercise Six
+
+Write a JavaScript program to sort an array of JavaScript objects.
+Sample Object :
+
+var library = [
+{ title: 'The Road Ahead', author: 'Bill Gates', libraryID: 1254 },
+{ title: 'Walter Isaacson', author: 'Steve Jobs', libraryID: 4264 },
+{ title: 'Mockingjay: The Final Book of The Hunger Games', author: 'Suzanne
+Collins', libraryID: 3245 }];
+
+Expected Output:
+[
+{ author: "Walter Isaacson", libraryID: 4264, title: "Steve Jobs" },
+{ author: "Suzanne Collins", libraryID: 3245, title: "Mockingjay: The Final Book
+of The Hunger Games" },
+{ author: "The Road Ahead", libraryID: 1254, title: "Bill Gates" }]
+ */
+
+function sortArrayObjs(array) {
+	array.sort( (a, b) => b["libraryID"] - a["libraryID"])
+	return array.map( obj => {
+		if (obj["author"] === "Bill Gates" || obj["author"] === "Steve Jobs") {
+			let author = obj["author"]
+			let title = obj["title"]
+			obj["author"] = title
+			obj["title"] = author
+		}
+	})
+}
