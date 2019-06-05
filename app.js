@@ -82,3 +82,17 @@ function removeRollnoProp(object) {
 }
 
 
+/*
+Exercise Five
+
+Display the length of the object (count of properties using
+Enumeration and Object.keys)
+ */
+
+function displayObjLength(object) {
+	let count = 0
+	Object.keys(object).forEach(key => count++)
+	return count
+}
+
+
