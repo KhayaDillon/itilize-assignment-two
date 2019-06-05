@@ -42,3 +42,22 @@ for (var i = 0; i <= 15; i++) {
 }
 
 
+/*
+Exercise Three
+
+Create a function sum() that accepts any number of parameters and adds them
+together by iterating over the values in arguments with a while loop. 
+*/
+
+function sum() {
+	let i = 0
+	let total = 0
+	
+	while (i < arguments.length) {
+		total += arguments[i]
+		i++
+	}
+	return total
+}
+
+
