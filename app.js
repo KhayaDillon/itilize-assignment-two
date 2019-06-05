@@ -61,3 +61,24 @@ function sum() {
 }
 
 
+/*
+Exercise Four
+
+Write a JavaScript program to delete the rollno property from the
+following object. Also print the object before and after deleting the
+property.
+
+Sample object:
+var student = {
+name : "David Rayy",
+sclass : "VI",
+rollno : 12 };
+ * /
+ 
+function removeRollnoProp(object) {
+	console.log(object)
+	delete object["rollno"]
+	console.log(object)
+}
+
+
